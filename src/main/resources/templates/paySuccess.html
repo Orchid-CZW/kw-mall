@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <!--声明文档兼容模式，表示使用IE浏览器的最新模式-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--设置视口的宽度(值为设备的理想宽度)，页面初始缩放值<理想宽度/可见宽度>-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+        <title>酷玩周边商城</title>
+        <!-- 引入Bootstrap核心样式文件 -->
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+        <link rel="stylesheet" th:href="@{/css/base.css}"/>
+        <!-- 引入jQuery核心js文件 -->
+        <script th:src="@{/js/jquery-1.11.3.min.js}"></script>
+        <!-- 引入BootStrap核心js文件 -->
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+        <style type="text/css">
+            .navbar {
+                border-radius: 0px;
+                margin-bottom: 0px;
+            }
+
+            dt,
+            dd {
+                line-height: 50px;
+                height: 50px;
+                border-bottom: 1px solid gainsboro;
+            }
+
+            @media only screen and (min-width: 320px) and (max-width: 640px) {
+                .my-font {
+                    font-size: 16px;
+                }
+            }
+        </style>
+    </head>
+
+    <body class="main">
+
+        <div th:replace="common :: header"></div>
+
+        <div id="divcontent">
+            <table width="100%" border="0" cellspacing="0">
+                <tr>
+                    <td style="padding:30px; text-align:center" class="btn-default">
+                        <table width="100%" border="0" cellspacing="0" style="margin-top:70px" class="btn-default">
+                            <tr>
+                                <!--<td style="width:98%">
+                                    <img th:src="@{/img/banner1.jpg}" width="128" height="128" />
+                                </td>-->
+                                <td style="padding-top:30px">
+                                    <font style="font-weight:bold; color:#FF0000">支 付 成 功</font><br /><br />
+                                    <a th:href="@{/}">
+                                        <!--<span id="second">5</span>-->返 回 首 页
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        <h1>&nbsp;</h1>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div th:replace="common:: footer"></div>
+
+    </body>
+</html>

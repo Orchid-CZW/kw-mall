@@ -1,0 +1,38 @@
+# 服务器配置
+server:
+    port: 8080
+    servlet:
+        context-path: /kwmall
+
+spring:
+    # 外置JDBC配置文件
+    profiles:
+        active: jdbc,mvc
+    # 关闭Thymeleaf页面缓存
+    thymeleaf:
+        cache: false
+    # 配置国际化资源文件
+    # messages:
+    #    basename: i18n.logo
+
+# mybatis配置
+mybatis:
+    configuration:
+        # 开启驼峰命名匹配映射
+        mybatis.configuration.map-underscore-to-camel-case: true
+    # 配置Mybatis的xml映射文件路径
+    # mapper-locations:
+        # classpath: mapper/*.xml
+    # 配置xml映射文件中指定的实体类别名路径
+    # type-aliases-package: com.orchid.springboot.domain
+
+# 分页pageHelper
+pagehelper:
+    helper-dialect: mysql
+    reasonable: true
+    support-methods-arguments: true
+
+# 日志
+logging:
+    level:
+        root: debug

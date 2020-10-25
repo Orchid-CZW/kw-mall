@@ -1,0 +1,4 @@
+1.${}里面只能是变量，不能是表达式;变量不会向上查找，默认request，其他需要明确范围：例如session.cart
+th:if="${session.cart}==null || ${#lists.size(session.cart.cartItemMap)}<=0
+2.@RestController不能跳转页面，作用是将数据转换为json数据
+3.
